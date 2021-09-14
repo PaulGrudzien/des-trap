@@ -2,6 +2,10 @@ body {
     font-family: sans-serif;
 }
 
+h1 {
+    font-size: 28pt;
+}
+
 div.main {
     margin: auto;
     width: 60%;
@@ -10,13 +14,14 @@ div.main {
 }
 
 div.tapis {
-    height: 280px;
-    width: 50px;
+    height: 680px;
+    width: 135px;
     display: block;
     margin: auto;
 }
 
 img {
+    width: 125px;
     border-radius: 10px;
     border: 1px solid black;
     display: block;
@@ -28,13 +33,13 @@ img.relancer {
 }
 
 input {
+    font-size: 24pt;
     height: 50px;
     width: 260px;
     background-color: #1e90ff;
     display: inline-block;
     border: 1px solid black;
     color: white;
-    font-size: 16pt;
     margin: 10px;
     line-height: 50px;
     cursor: pointer;
