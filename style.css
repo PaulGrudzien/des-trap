@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+}
+
+div.main {
+    margin: auto;
+    width: 60%;
+    min-width: 660px;
+    text-align: center
+}
+
+div.tapis {
+    height: 280px;
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+
+img {
+    border-radius: 10px;
+    border: 1px solid black;
+    display: block;
+    margin: 8px auto;
+}
+
+img.relancer {
+    box-shadow: red 0px 0px 0px 3px;
+}
+
+input {
+    height: 50px;
+    width: 260px;
+    background-color: #1e90ff;
+    display: inline-block;
+    border: 1px solid black;
+    color: white;
+    font-size: 16pt;
+    margin: 10px;
+    line-height: 50px;
+    cursor: pointer;
+}
