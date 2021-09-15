@@ -28,7 +28,7 @@ img {
     margin: 8px auto;
 }
 
-img.relancer {
+img.garder {
     box-shadow: red 0px 0px 0px 3px;
 }
 
@@ -36,11 +36,27 @@ input {
     font-size: 24pt;
     height: 100px;
     width: 300px;
-    background-color: #1e90ff;
     display: inline-block;
     border: 1px solid black;
     color: white;
     margin: 10px;
     line-height: 50px;
     cursor: pointer;
+}
+
+input.vert {
+	background-color: #3cb371;
+}
+
+input.orange {
+	background-color: #ffa500;
+}
+
+input.rouge {
+	background-color: #ff6347;
+}
+
+p.consigne {
+	text-align: center;
+	font-size: 24pt;
 }
