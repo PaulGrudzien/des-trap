@@ -1,8 +1,18 @@
 const tapis = document.querySelector('.tapis')
 const bouton = document.querySelector('input')
 const par = document.querySelector('p.consigne')
+const histo = document.querySelector('div.historique')
 const faces = ['zzz.png', 'etoile.png', 'bouclier.png']
 const des = [{face:'zzz.png', relancer:true}, {face:'zzz.png', relancer:true}, {face:'zzz.png', relancer:true}, {face:'zzz.png', relancer:true}, {face:'zzz.png', relancer:true}]
+
+function shake(element) {
+  element.className = "";
+  window.requestAnimationFrame(function(time) {
+    window.requestAnimationFrame(function(time) {
+      element.className = "shake";
+    });
+  });
+}
 
 function lancer() {
     des.forEach((de, i) => {
@@ -12,6 +22,7 @@ function lancer() {
         image.src = de.face
         image.id = i
         tapis.appendChild(image)
+        shake(image)
     })
     bouton.value = "Relancer"
 	bouton.className = "orange"
@@ -19,7 +30,6 @@ function lancer() {
 }
 
 function selectionner(i) {
-    console.log(i)
     const image = document.getElementById(i)
     if (des[i].relancer) {
         image.className = "garder"
@@ -35,8 +45,8 @@ function relancer() {
         if (de.relancer) {
             const image = document.getElementById(i)
             de.face = faces[Math.floor(Math.random()*faces.length)]
-            image.className = ""
             image.src = de.face
+            shake(image)
         }
     })
     bouton.value = "Ramasser"
@@ -48,6 +58,13 @@ function ramasser() {
     tapis.innerHTML = ''
     bouton.value = "Lancer"
 	bouton.className = "vert"
+	const div = document.createElement("div")
+	des.forEach(de => {
+	    const image = document.createElement("img")
+	    image.src = de.face
+	    div.appendChild(image)
+	})
+	histo.insertBefore(div, histo.firstChild);
 }
 
 function handleClick(event) {
