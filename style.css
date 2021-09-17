@@ -41,8 +41,7 @@ div.historique div.de {
 
 input {
     font-size: 24pt;
-    height: 10%;
-    min-height: 50px;
+    height: 100px;
     width: 300px;
     display: inline-block;
     border: 1px solid black;
@@ -97,6 +96,9 @@ input.rouge {
     div.tapis {
         height: 135px;
     }
+    input {
+        height: 100px;
+    }
 }
 
 @media (orientation: portrait) {
@@ -107,5 +109,8 @@ input.rouge {
         min-height: 60vh;
         width: 12vh;
         margin: auto;
+    }
+    input {
+        height: 70px;
     }
 }
