@@ -1,32 +1,24 @@
+html {
+    height: 100%;
+	font-size: 18pt;
+}
+
 body {
     font-family: sans-serif;
+    text-align: center;
+    height: 100%;
 }
 
 h1 {
     font-size: 28pt;
 }
 
-div.main {
-    margin: auto;
-    width: 60%;
-    min-width: 660px;
-    text-align: center
-}
-
-div.tapis {
-    height: 680px;
-    width: 135px;
-    display: block;
-    margin: auto;
-}
-
 div.de {
-    width: 125px;
-    height: 125px;
+    width: 10vh;
+    height: 10vh;
     border-radius: 10px;
     border: 1px solid black;
-    display: block;
-    margin: 8px auto;
+    margin: 5px;
 }
 
 div.garder {
@@ -38,10 +30,6 @@ img {
     margin: 10%;
 }
 
-div.historique {
-    text-align: center;
-}
-
 div.historique div.de {
     width: 50px;
     height: 50px;
@@ -51,14 +39,10 @@ div.historique div.de {
     margin: 2px;
 }
 
-p.historique {
-	text-align: center;
-	font-size: 18pt;
-}
-
 input {
     font-size: 24pt;
-    height: 100px;
+    height: 10%;
+    min-height: 50px;
     width: 300px;
     display: inline-block;
     border: 1px solid black;
@@ -78,11 +62,6 @@ input.orange {
 
 input.rouge {
 	background-color: #ff6347;
-}
-
-p.consigne {
-	text-align: center;
-	font-size: 24pt;
 }
 
 @-webkit-keyframes spaceboots {
@@ -106,4 +85,27 @@ p.consigne {
 	-webkit-transform-origin:50% 50%;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: linear;
+}
+
+
+@media (orientation: landscape) {
+    div.de {
+        display: inline-block;
+        height: 125px;
+        width: 125px;
+    }
+    div.tapis {
+        height: 135px;
+    }
+}
+
+@media (orientation: portrait) {
+    div.de {
+        display: block;
+    }
+    div.tapis {
+        min-height: 60vh;
+        width: 12vh;
+        margin: auto;
+    }
 }

@@ -92,4 +92,4 @@ function handleClick(event) {
     }
 }
 
-document.querySelector('.main').addEventListener("click", handleClick)
+document.querySelector('body').addEventListener("click", handleClick)
